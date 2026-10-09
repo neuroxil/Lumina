@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         Do **not** paste real 2FA secrets, export files, or vault.json.
-        Crypto / secret-leak issues belong in a [private advisory](../../security/advisories/new), not here.
+        Crypto / secret-leak issues belong in a [private advisory](https://github.com/neuroxil/Lumina/security/advisories/new), not here.
   - type: textarea
     id: what
     attributes:

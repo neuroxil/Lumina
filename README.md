@@ -54,7 +54,7 @@ Grab a build from [Releases](../../releases). If SmartScreen appears, choose **M
 Requires [Node.js 20+](https://nodejs.org/) (22 recommended).
 
 ```bash
-git clone https://github.com/<you>/lumina.git
+git clone https://github.com/neuroxil/Lumina.git
 cd lumina
 npm install
 npm test

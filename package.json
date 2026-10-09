@@ -6,6 +6,14 @@
   "main": "out/main/index.js",
   "author": "Lumina contributors",
   "license": "MIT",
+  "homepage": "https://github.com/neuroxil/Lumina",
+  "bugs": {
+    "url": "https://github.com/neuroxil/Lumina/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neuroxil/Lumina.git"
+  },
   "keywords": [
     "2fa",
     "totp",

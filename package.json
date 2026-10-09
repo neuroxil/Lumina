@@ -78,8 +78,7 @@
             "x64"
           ]
         }
-      ],
-      "artifactName": "${productName}-${version}-win-x64.${ext}"
+      ]
     },
     "publish": null,
     "nsis": {
@@ -89,7 +88,12 @@
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
       "shortcutName": "Lumina",
-      "uninstallDisplayName": "Lumina Authenticator"
+      "uninstallDisplayName": "Lumina Authenticator",
+      "artifactName": "${productName}-${version}-win-x64-setup.${ext}"
+    },
+    "portable": {
+      "artifactName": "${productName}-${version}-win-x64-portable.${ext}",
+      "requestExecutionLevel": "user"
     }
   },
   "allowScripts": {

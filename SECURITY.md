@@ -32,6 +32,7 @@ You should hear back within 7 days. Please give us time to ship a fix before pub
 
 - Codes are generated locally. There is no Lumina server.
 - With a PIN set, `vault.json` is encrypted with scrypt (N=16384, r=8, p=1) and AES-256-GCM.
+- Installed builds store the vault in `%APPDATA%\Lumina`. The portable exe stores it in `LuminaData\` beside the executable.
 - The UI process is not given raw secrets; it receives rotating codes over IPC.
 
 ## What Lumina does not claim

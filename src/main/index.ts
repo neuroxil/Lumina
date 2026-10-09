@@ -1,4 +1,6 @@
 import { app, Menu } from 'electron'
+import { mkdirSync } from 'fs'
+import { join } from 'path'
 import { createWindow, getMainWindow } from './window'
 import { createTray } from './tray'
 import { registerIpc, watchIdleLock, watchMinimizeLock } from './ipc'
@@ -6,6 +8,13 @@ import { lockVault } from './services/vault'
 
 app.setName('Lumina')
 app.setAppUserModelId('app.lumina.authenticator')
+
+const portableDir = process.env.PORTABLE_EXECUTABLE_DIR
+if (portableDir) {
+  const dataDir = join(portableDir, 'LuminaData')
+  mkdirSync(dataDir, { recursive: true })
+  app.setPath('userData', dataDir)
+}
 
 const gotLock = app.requestSingleInstanceLock()
 if (!gotLock) {

@@ -15,3 +15,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Encrypted export, URI export, and local backups
 - Tray icon, always-on-top window, auto-lock
 - GitHub Actions CI and tagged Windows releases
+- Windows NSIS setup installer and a no-install portable exe (`LuminaData` next to the portable file)

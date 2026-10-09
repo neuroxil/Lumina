@@ -33,7 +33,7 @@ This is an independent open-source project. It is not affiliated with Google Aut
 ## Security model
 
 - Secrets stay in the Electron **main** process. The renderer only receives rotating codes.
-- Vault file: `%APPDATA%\Lumina\vault.json`, encrypted with scrypt + AES-256-GCM.
+- Vault file: `%APPDATA%\Lumina\vault.json` (installer), or `LuminaData\vault.json` next to the portable exe. Encrypted with scrypt + AES-256-GCM.
 - Clipboard can auto-clear after a code is copied.
 - Exporting without a password writes secrets in plaintext. Only do that onto media you control.
 - Builds on GitHub Actions are **unsigned**. Windows SmartScreen will likely warn until you sign releases yourself.
@@ -42,9 +42,12 @@ Lumina has not had a third-party security audit. Read [SECURITY.md](SECURITY.md)
 
 ## Install
 
-1. Open the [Releases](../../releases) page
-2. Download `Lumina-1.0.0-win-x64.exe` (installer) or the portable `.exe`
-3. Run it. If SmartScreen appears, choose **More info → Run anyway**
+Grab a build from [Releases](../../releases). If SmartScreen appears, choose **More info → Run anyway** (builds are unsigned).
+
+| File | What it is |
+| --- | --- |
+| `Lumina-1.0.0-win-x64-setup.exe` | Windows installer. Wizard, Start Menu + desktop shortcuts, uninstalls from Settings. Vault lives in `%APPDATA%\Lumina`. |
+| `Lumina-1.0.0-win-x64-portable.exe` | No setup. Double-click to run. Vault lives in `LuminaData\` next to the exe — copy that folder with the exe if you move it. |
 
 ## Build from source
 

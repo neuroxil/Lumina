@@ -1,0 +1,46 @@
+name: Bug report
+description: Something is broken in Lumina
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do **not** paste real 2FA secrets, export files, or vault.json.
+        Crypto / secret-leak issues belong in a [private advisory](../../security/advisories/new), not here.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      placeholder: What did you do, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Lumina version
+      placeholder: 1.0.0 or a commit SHA
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 24H2
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: Redact any codes or account names you care about.
